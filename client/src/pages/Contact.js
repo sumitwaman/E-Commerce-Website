@@ -3,28 +3,31 @@ import Layout from "./../components/Layout/Layout";
 import { BiMailSend, BiPhoneCall, BiSupport } from "react-icons/bi";
 const Contact = () => {
   return (
-    <Layout title={"Contact us - Dattakrupa Hardwares"}>
+    <Layout title={"Contact us - Dattakrupa hardware & electronics"}>
+      <div style={{ marginTop: "60px" }}></div>
       <div className="row contactus ">
         <div className="col-md-6 ">
           <img
-            src="/images/contactus.jpeg"
-            alt="contactus"
-            style={{ width: "100%" }}
+            src="/images/about.jpeg"
+            alt="aboutus"
+            style={{ width: "450px", padding: "70px", marginLeft: "100px" }}
           />
         </div>
         <div className="col-md-4">
-          <h1 className="bg-dark p-2 text-white text-center">CONTACT US</h1>
-          <p className="text-justify mt-2">
-            hardware store 
+          <h3 className=" p-2 text-dark text-center">CONTACT US</h3>
+
+
+          <p className="mt-3">
+            <b>PHONE NO </b>: +91 9822536671
           </p>
           <p className="mt-3">
-            <BiMailSend /> : www.yashashokgurav@gmail.com
+            <b>ADDRESS </b>: Dattakrupa Hardware and Electronics, Ganesh Nagar, Nandanwan, Nagpur - 440024.
           </p>
           <p className="mt-3">
-            <BiPhoneCall /> : 9850565798
+            <b>OPEN DAYS </b>: Monday to Saturday
           </p>
           <p className="mt-3">
-            <BiSupport /> : 0000-0000-0000 (toll free)
+            <b>TIMINGS </b>: 8 AM to 10 PM
           </p>
         </div>
       </div>

@@ -5,11 +5,11 @@ import Layout from "../components/Layout/Layout";
 const Categories = () => {
   const categories = useCategory();
   return (
-    <Layout title={"All Categories"}>
-      <div className="container" style={{ marginTop: "100px" }}>
+    <Layout title={"Categories - Dattakrupa hardware & electronics"}>
+      <div className="container" style={{ marginTop: "50px", padding: "70px" }}>
         <div className="row container">
           {categories.map((c) => (
-            <div className="col-md-4 mt-5 mb-3 gx-3 gy-3" key={c._id}>
+            <div className="col-md-4 mt-3 mb-3 gx-4 gy-4" key={c._id}>
               <div className="card">
                 <Link to={`/category/${c.slug}`} className="btn cat-btn">
                   {c.name}

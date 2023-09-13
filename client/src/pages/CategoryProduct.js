@@ -16,7 +16,6 @@ const CategoryProduct = () => {
 
   useEffect(() => {
     if (params?.slug) getPrductsByCat();
-  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [params?.slug]);
   const getPrductsByCat = async () => {
     try {
@@ -31,15 +30,15 @@ const CategoryProduct = () => {
   };
 
   return (
-    <Layout title={`Category - ${category.name}`}>
-      <div className="container mt-3 category">
+    <Layout>
+      <div className="mt-3 category container my-0">
         <h4 className="text-center">Category - {category?.name}</h4>
-        <h6 className="text-center">{products?.length} result found </h6>
-        <div className="row">
-          <div className="col-md-9 offset-1">
-            <div className="d-flex flex-wrap">
+        <h6 className="text-center">{products?.length} found </h6>
+        <div className="row justify-content-evenly">
+          <div className="col">
+            <div className="d-flex flex-wrap justify-content-evenly">
               {products?.map((p) => (
-                <div className="card m-2" key={p._id}>
+                <div className="card my-5" key={p._id}>
                   <img
                     src={`/api/v1/product/product-photo/${p._id}`}
                     className="card-img-top"
@@ -49,10 +48,7 @@ const CategoryProduct = () => {
                     <div className="card-name-price">
                       <h5 className="card-title">{p.name}</h5>
                       <h5 className="card-title card-price">
-                        {p.price.toLocaleString("en-US", {
-                          style: "currency",
-                          currency: "INR",
-                        })}
+                      ₹{p.price.toLocaleString("en-US")}
                       </h5>
                     </div>
                     <p className="card-text ">
@@ -60,7 +56,7 @@ const CategoryProduct = () => {
                     </p>
                     <div className="card-name-price">
                       <button
-                        className="btn btn-info ms-1"
+                        className="btn btn-warning ms-1"
                         onClick={() => navigate(`/product/${p.slug}`)}
                       >
                         More Details

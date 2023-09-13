@@ -19,8 +19,8 @@ const app = express();
 
 //middelwares
 app.use(cors());
-app.use(express.json());
-app.use(morgan("dev"));
+app.use(express.json()); //to enable passing of json files in request and response
+app.use(morgan("dev")); //morgan feature
 
 //routes
 app.use("/api/v1/auth", authRoutes);

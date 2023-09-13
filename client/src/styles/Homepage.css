@@ -1,11 +1,21 @@
-.banner-img {
-  margin-top: 60px;
-  height: 350px;
+.tp {
+  padding-top: 20px;
 }
 
 .home-page h1 {
-  color: gray;
-  font-family: "Playfair Display", serif;
+  color: rgb(0, 0, 0);
+}
+
+.banner-img{
+  padding-top: 50px;
+}
+
+.bg{
+  background: url(../../public/images/bg.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 .home-page {
@@ -13,8 +23,8 @@
   flex-wrap: wrap;
 }
 .home-page .card {
-  background-color: rgba(128, 128, 128, 0.097);
-  width: 18rem;
+  background-color: rgba(255, 255, 255, 0.084);
+  width: 310px;
 }
 .home-page .card-name-price {
   display: flex;
@@ -23,20 +33,21 @@
 }
 
 .home-page .card-price {
-  color: green;
+  color: rgb(0, 71, 44);
   font-weight: bold;
 }
 .home-page button {
-  border-radius: 0;
-  width: 100%;
-  border-top-left-radius: 5px;
-  border-bottom-right-radius: 5px;
-  font-size: 14px;
-  font-weight: bold;
+  border-radius: 5px;
+  font-size: 18px;
+  padding: 8px;
+}
+
+.btn-dark {
+  background: black;
 }
 
 .home-page .card-text {
-  color: rgb(90, 89, 89);
+  color: rgb(70, 70, 70);
 }
 
 .home-page .card img:hover {
@@ -45,18 +56,20 @@
 
 .home-page .card-img-top {
   height: 300px !important;
+  width: 300px !important;
+  margin: 0 5px;
 }
 /* ==================
 filters
 ============== */
-.filters h4 {
-  margin-top: 100px;
-  color: gray !important;
-  border-bottom: 1px solid rgba(128, 128, 128, 0.337);
+.filters h6 {
+  color: rgb(0, 0, 0) !important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.337);
+  margin-top: 20px;
 }
 
 .ant-checkbox-wrapper:first-of-type {
-  margin-left: 8px;
+  margin-left: 10px;
 }
 
 .ant-checkbox-wrapper {
@@ -71,12 +84,17 @@ filters
   background-color: black;
   width: 100%;
   border: none;
-  border-radius: 0;
+  border-radius: 5px;
   margin-top: 20px;
 }
 
 .loadmore {
-  color: green;
+  color: rgb(0, 0, 0);
   font-weight: bold;
   font-size: 20px !important;
+}
+
+.fil {
+  font-weight: 400;
+  font-size: 18px;
 }
